@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "try-now",
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node-server",
+      "config": {
+        "includeFiles": ["static/**/*.js"]
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "index.js" }
+  ]
+}
